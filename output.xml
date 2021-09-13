@@ -1,67 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.9 on win32)" generated="20210913 12:18:59.966" rpa="false">
-<suite id="s1" name="WebTesting" source="C:\Testing\workspace\WebTesting">
-<suite id="s1-s1" name="GoogleSearch" source="C:\Testing\workspace\WebTesting\GoogleSearch.robot">
+<robot generator="Robot 3.1.2 (Python 3.8.10 on linux)" generated="20210913 21:56:06.753" rpa="false">
+<suite id="s1" name="WebTesting" source="/home/serkanaks/git/WebTesting">
+<suite id="s1-s1" name="GoogleSearch" source="/home/serkanaks/git/WebTesting/GoogleSearch.robot">
 <test id="s1-s1-t1" name="Google Search">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the given ``url``.</doc>
+<kw name="Open Browser">
 <arguments>
 <arg>https://www.google.com</arg>
 <arg>browser=googlechrome</arg>
 </arguments>
-<msg timestamp="20210913 12:19:00.118" level="INFO">Opening browser 'googlechrome' to base url 'https://www.google.com'.</msg>
-<status status="PASS" starttime="20210913 12:19:00.118" endtime="20210913 12:19:02.913"></status>
+<msg timestamp="20210913 21:56:06.988" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210913 21:56:06.987" endtime="20210913 21:56:06.988"></status>
 </kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<status status="PASS" starttime="20210913 12:19:02.913" endtime="20210913 12:19:02.916"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>name=q</arg>
-<arg>test automation</arg>
-</arguments>
-<msg timestamp="20210913 12:19:02.916" level="INFO">Typing text 'test automation' into text field 'name=q'.</msg>
-<status status="PASS" starttime="20210913 12:19:02.916" endtime="20210913 12:19:03.000"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>name=btnK</arg>
-</arguments>
-<msg timestamp="20210913 12:19:03.000" level="INFO">Clicking button 'name=btnK'.</msg>
-<status status="PASS" starttime="20210913 12:19:03.000" endtime="20210913 12:19:05.495"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20210913 12:19:07.499" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210913 12:19:05.496" endtime="20210913 12:19:07.499"></status>
-</kw>
-<status status="PASS" starttime="20210913 12:19:00.118" endtime="20210913 12:19:07.500" critical="yes"></status>
+<status status="FAIL" starttime="20210913 21:56:06.984" endtime="20210913 21:56:06.988" critical="yes">No keyword with name 'Open Browser' found.</status>
 </test>
-<status status="PASS" starttime="20210913 12:19:00.010" endtime="20210913 12:19:07.500"></status>
+<status status="FAIL" starttime="20210913 21:56:06.822" endtime="20210913 21:56:06.989"></status>
 </suite>
-<status status="PASS" starttime="20210913 12:18:59.989" endtime="20210913 12:19:07.501"></status>
+<status status="FAIL" starttime="20210913 21:56:06.801" endtime="20210913 21:56:06.990"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="WebTesting">WebTesting</stat>
-<stat pass="1" fail="0" id="s1-s1" name="GoogleSearch">WebTesting.GoogleSearch</stat>
+<stat pass="0" fail="1" id="s1" name="WebTesting">WebTesting</stat>
+<stat pass="0" fail="1" id="s1-s1" name="GoogleSearch">WebTesting.GoogleSearch</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20210913 21:56:06.940" level="ERROR">Adding keyword 'add_cookie' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.940" level="ERROR">Adding keyword 'add_location_strategy' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.940" level="ERROR">Adding keyword 'alert_should_be_present' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.941" level="ERROR">Adding keyword 'alert_should_not_be_present' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.942" level="ERROR">Adding keyword 'capture_element_screenshot' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.943" level="ERROR">Adding keyword 'capture_page_screenshot' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.944" level="ERROR">Adding keyword 'click_button' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.945" level="ERROR">Adding keyword 'click_element' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.945" level="ERROR">Adding keyword 'click_image' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.946" level="ERROR">Adding keyword 'click_link' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.947" level="ERROR">Adding keyword 'create_webdriver' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.947" level="ERROR">Adding keyword 'current_frame_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.947" level="ERROR">Adding keyword 'current_frame_should_not_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.949" level="ERROR">Adding keyword 'element_attribute_value_should_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.950" level="ERROR">Adding keyword 'element_should_be_visible' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.950" level="ERROR">Adding keyword 'element_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.950" level="ERROR">Adding keyword 'element_should_not_be_visible' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.951" level="ERROR">Adding keyword 'element_should_not_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.951" level="ERROR">Adding keyword 'element_text_should_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.951" level="ERROR">Adding keyword 'element_text_should_not_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.952" level="ERROR">Adding keyword 'frame_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.953" level="ERROR">Adding keyword 'get_cookies' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.955" level="ERROR">Adding keyword 'get_list_items' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.955" level="ERROR">Adding keyword 'get_locations' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.958" level="ERROR">Adding keyword 'get_table_cell' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.960" level="ERROR">Adding keyword 'get_window_handles' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.960" level="ERROR">Adding keyword 'get_window_identifiers' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.960" level="ERROR">Adding keyword 'get_window_names' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.960" level="ERROR">Adding keyword 'get_window_size' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.961" level="ERROR">Adding keyword 'get_window_titles' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.961" level="ERROR">Adding keyword 'handle_alert' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.962" level="ERROR">Adding keyword 'input_password' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.962" level="ERROR">Adding keyword 'input_text' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.962" level="ERROR">Adding keyword 'input_text_into_alert' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.963" level="ERROR">Adding keyword 'location_should_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.963" level="ERROR">Adding keyword 'location_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.963" level="ERROR">Adding keyword 'log_source' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.966" level="ERROR">Adding keyword 'open_browser' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.966" level="ERROR">Adding keyword 'page_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.967" level="ERROR">Adding keyword 'page_should_contain_button' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.967" level="ERROR">Adding keyword 'page_should_contain_checkbox' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.967" level="ERROR">Adding keyword 'page_should_contain_element' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.967" level="ERROR">Adding keyword 'page_should_contain_image' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.967" level="ERROR">Adding keyword 'page_should_contain_link' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.968" level="ERROR">Adding keyword 'page_should_contain_list' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.968" level="ERROR">Adding keyword 'page_should_contain_radio_button' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.968" level="ERROR">Adding keyword 'page_should_contain_textfield' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.968" level="ERROR">Adding keyword 'page_should_not_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.968" level="ERROR">Adding keyword 'page_should_not_contain_button' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.969" level="ERROR">Adding keyword 'page_should_not_contain_checkbox' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.969" level="ERROR">Adding keyword 'page_should_not_contain_element' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.969" level="ERROR">Adding keyword 'page_should_not_contain_image' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.969" level="ERROR">Adding keyword 'page_should_not_contain_link' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.969" level="ERROR">Adding keyword 'page_should_not_contain_list' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.970" level="ERROR">Adding keyword 'page_should_not_contain_radio_button' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.970" level="ERROR">Adding keyword 'page_should_not_contain_textfield' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.970" level="ERROR">Adding keyword 'press_keys' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.974" level="ERROR">Adding keyword 'set_window_size' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.975" level="ERROR">Adding keyword 'submit_form' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.976" level="ERROR">Adding keyword 'switch_window' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.977" level="ERROR">Adding keyword 'table_cell_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.977" level="ERROR">Adding keyword 'table_column_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.977" level="ERROR">Adding keyword 'table_footer_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.978" level="ERROR">Adding keyword 'table_header_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.978" level="ERROR">Adding keyword 'table_row_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.978" level="ERROR">Adding keyword 'table_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.978" level="ERROR">Adding keyword 'textarea_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.978" level="ERROR">Adding keyword 'textarea_value_should_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.978" level="ERROR">Adding keyword 'textfield_should_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.979" level="ERROR">Adding keyword 'textfield_value_should_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.979" level="ERROR">Adding keyword 'title_should_be' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.980" level="ERROR">Adding keyword 'wait_for_condition' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.980" level="ERROR">Adding keyword 'wait_until_element_contains' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.981" level="ERROR">Adding keyword 'wait_until_element_does_not_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.981" level="ERROR">Adding keyword 'wait_until_element_is_enabled' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.981" level="ERROR">Adding keyword 'wait_until_element_is_not_visible' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.981" level="ERROR">Adding keyword 'wait_until_element_is_visible' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.982" level="ERROR">Adding keyword 'wait_until_location_contains' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.982" level="ERROR">Adding keyword 'wait_until_location_does_not_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.982" level="ERROR">Adding keyword 'wait_until_location_is' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.982" level="ERROR">Adding keyword 'wait_until_location_is_not' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.982" level="ERROR">Adding keyword 'wait_until_page_contains' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.983" level="ERROR">Adding keyword 'wait_until_page_contains_element' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.983" level="ERROR">Adding keyword 'wait_until_page_does_not_contain' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
+<msg timestamp="20210913 21:56:06.983" level="ERROR">Adding keyword 'wait_until_page_does_not_contain_element' to library 'SeleniumLibrary' failed: Calling dynamic method 'get_keyword_arguments' failed: Return value must be list of strings.</msg>
 </errors>
 </robot>
