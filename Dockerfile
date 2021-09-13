@@ -10,6 +10,8 @@ RUN pip install -U pip
 
 COPY ./requirements.txt /tmp/requirements.txt
 
+COPY ./GoogleSearch.robot /home/WebTesting
+
 RUN  pip install -r /tmp/requirements.txt
 
 RUN wget --no-verbose https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
