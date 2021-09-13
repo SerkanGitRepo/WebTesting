@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.9 on win32)" generated="20210913 12:18:59.966" rpa="false">
+<suite id="s1" name="WebTesting" source="C:\Testing\workspace\WebTesting">
+<suite id="s1-s1" name="GoogleSearch" source="C:\Testing\workspace\WebTesting\GoogleSearch.robot">
+<test id="s1-s1-t1" name="Google Search">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com</arg>
+<arg>browser=googlechrome</arg>
+</arguments>
+<msg timestamp="20210913 12:19:00.118" level="INFO">Opening browser 'googlechrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20210913 12:19:00.118" endtime="20210913 12:19:02.913"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<status status="PASS" starttime="20210913 12:19:02.913" endtime="20210913 12:19:02.916"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>test automation</arg>
+</arguments>
+<msg timestamp="20210913 12:19:02.916" level="INFO">Typing text 'test automation' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20210913 12:19:02.916" endtime="20210913 12:19:03.000"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>name=btnK</arg>
+</arguments>
+<msg timestamp="20210913 12:19:03.000" level="INFO">Clicking button 'name=btnK'.</msg>
+<status status="PASS" starttime="20210913 12:19:03.000" endtime="20210913 12:19:05.495"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210913 12:19:07.499" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210913 12:19:05.496" endtime="20210913 12:19:07.499"></status>
+</kw>
+<status status="PASS" starttime="20210913 12:19:00.118" endtime="20210913 12:19:07.500" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210913 12:19:00.010" endtime="20210913 12:19:07.500"></status>
+</suite>
+<status status="PASS" starttime="20210913 12:18:59.989" endtime="20210913 12:19:07.501"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="WebTesting">WebTesting</stat>
+<stat pass="1" fail="0" id="s1-s1" name="GoogleSearch">WebTesting.GoogleSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
