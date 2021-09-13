@@ -15,10 +15,16 @@ RUN wget --no-verbose https://dl.google.com/linux/direct/google-chrome-stable_cu
 
 RUN dpkg --install google-chrome-stable_current_amd64.deb; apt-get --fix-broken --assume-yes install
 
-RUN CHROMEDRIVER_VERSION='wget --no-verbose --output-document - https://chromedriver.storage.googleapis.com/LATEST_RELEASE' && \
-    wget --no-verbose --output-document /tmp/chromedriver_linux64.zip http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip && \
-    unzip -qq /tmp/chromedriver_linux64.zip -d /opt/chromedriver && \
-    chmod +x /opt/chromedriver/chromedriver && \
-    ln -fs /opt/chromedriver/chromedriver /usr/local/bin/chromedriver
+# Set up Chromedriver Environment variables
+ENV CHROMEDRIVER_VERSION 2.19
+ENV CHROMEDRIVER_DIR /chromedriver
+RUN mkdir $CHROMEDRIVER_DIR
+
+RUN wget -q --continue -P $CHROMEDRIVER_DIR 'http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip'
+
+RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
+
+ENV PATH $CHROMEDRIVER_DIR:$PATH
+
     
-ENTRYPOINT ['/run_tests.sh'] 
+ENTRYPOINT ["/run_tests.sh"] 
