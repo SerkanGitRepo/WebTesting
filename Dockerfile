@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install --quiet --assume-yes python3-pip unzip wge
 
 RUN pip install -U pip
 
-COPY requirements.txt /tmp/requirements.txt
+COPY ./requirements.txt /tmp/requirements.txt
 
 RUN  pip install -r /tmp/requirements.txt
 
