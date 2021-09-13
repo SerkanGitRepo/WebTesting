@@ -23,18 +23,18 @@ RUN apt-get install -y libglib2.0-0 \
     libgconf-2-4 \
     libfontconfig1
 
-RUN pip install pyvirtualdisplay
+#RUN pip install pyvirtualdisplay
 
-ENV CHROMEDRIVER_VERSION 2.40
+#ENV CHROMEDRIVER_VERSION 2.40
 
-ENV CHROMEDRIVER_DIR /chromedriver
+#ENV CHROMEDRIVER_DIR /chromedriver
 
-RUN mkdir $CHROMEDRIVER_DIR
+#RUN mkdir $CHROMEDRIVER_DIR
 
-RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
+#RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
 
-RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
+#RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
-ENV PATH $CHROMEDRIVER_DIR:$PATH
+#ENV PATH $CHROMEDRIVER_DIR:$PATH
     
 #ENTRYPOINT ["./run_tests.sh"] 
