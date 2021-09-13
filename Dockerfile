@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install --quiet --assume-yes python-pip unzip wget
+RUN apt-get update && apt-get install --quiet --assume-yes python3-pip unzip wget
 
 RUN pip install -U pip
 
