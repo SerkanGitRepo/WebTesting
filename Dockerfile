@@ -25,7 +25,7 @@ RUN apt-get install -y libglib2.0-0 \
 
 RUN pip install pyvirtualdisplay
 
-ENV CHROMEDRIVER_VERSION 2.19
+ENV CHROMEDRIVER_VERSION 2.40
 
 ENV CHROMEDRIVER_DIR /chromedriver
 
