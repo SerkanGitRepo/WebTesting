@@ -18,7 +18,10 @@ RUN wget --no-verbose https://dl.google.com/linux/direct/google-chrome-stable_cu
 
 RUN dpkg --install google-chrome-stable_current_amd64.deb; apt-get --fix-broken --assume-yes install
 
-RUN apt-get install -y libgconf-2-4
+RUN apt-get install -y libglib2.0-0 \
+    libnss3 \
+    libgconf-2-4 \
+    libfontconfig1
 
 ENV CHROMEDRIVER_VERSION 2.19
 
