@@ -23,7 +23,7 @@ RUN apt-get install -y libglib2.0-0 \
     libgconf-2-4 \
     libfontconfig1
 
-#RUN pip install pyvirtualdisplay
+RUN pip install pyvirtualdisplay
 
 #ENV CHROMEDRIVER_VERSION 2.40
 
