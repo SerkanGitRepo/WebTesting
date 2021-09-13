@@ -28,4 +28,4 @@ RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
 ENV PATH $CHROMEDRIVER_DIR:$PATH
     
-ENTRYPOINT ["./run_tests.sh"] 
+#ENTRYPOINT ["./run_tests.sh"] 
