@@ -27,6 +27,5 @@ RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googlea
 RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
 ENV PATH $CHROMEDRIVER_DIR:$PATH
-
     
-ENTRYPOINT ["/run_tests.sh"] 
+ENTRYPOINT ["./run_tests.sh"] 
