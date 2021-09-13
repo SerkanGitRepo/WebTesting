@@ -1,5 +1,7 @@
 FROM ubuntu:latest
+
 ENV TZ=Europe/Kiev
+
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && apt-get install --quiet --assume-yes python3-pip unzip wget
@@ -10,17 +12,17 @@ COPY ./requirements.txt /tmp/requirements.txt
 
 RUN  pip install -r /tmp/requirements.txt
 
-
 RUN wget --no-verbose https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 RUN dpkg --install google-chrome-stable_current_amd64.deb; apt-get --fix-broken --assume-yes install
 
-# Set up Chromedriver Environment variables
 ENV CHROMEDRIVER_VERSION 2.19
+
 ENV CHROMEDRIVER_DIR /chromedriver
+
 RUN mkdir $CHROMEDRIVER_DIR
 
-RUN wget -q --continue -P $CHROMEDRIVER_DIR 'http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip'
+RUN wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
 
 RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
