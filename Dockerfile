@@ -10,7 +10,7 @@ RUN pip install -U pip
 
 COPY ./requirements.txt /tmp/requirements.txt
 
-COPY ./GoogleSearch.robot /home/WebTesting
+COPY ./GoogleSearch.robot /home/WebTesting/GoogleSearch.robot
 
 RUN  pip install -r /tmp/requirements.txt
 
