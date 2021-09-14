@@ -37,6 +37,6 @@ RUN pip install pyvirtualdisplay
 
 #ENV PATH $CHROMEDRIVER_DIR:$PATH
 
-COPY docker-compose.yml /home/CC_BDD_TNG
+COPY ./docker-compose.yml /home/docker-compose.yml
 
 #ENTRYPOINT ["./run_tests.sh"] 
