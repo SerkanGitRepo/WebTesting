@@ -41,4 +41,4 @@ COPY ./docker-compose.yml /home/docker-compose.yml
 
 #ENV PATH $CHROMEDRIVER_DIR:$PATH
 
-ENTRYPOINT ["./run_test.sh"] 
+ENTRYPOINT ["/home/WebTesting/run_test.sh"] 
