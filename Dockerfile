@@ -14,6 +14,8 @@ COPY ./GoogleSearch.robot /home/WebTesting/GoogleSearch.robot
 
 RUN  pip install -r /tmp/requirements.txt
 
+COPY ./docker-compose.yml /home/docker-compose.yml
+
 #RUN wget --no-verbose https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 #RUN dpkg --install google-chrome-stable_current_amd64.deb; apt-get --fix-broken --assume-yes install
@@ -36,7 +38,5 @@ RUN  pip install -r /tmp/requirements.txt
 #RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
 #ENV PATH $CHROMEDRIVER_DIR:$PATH
-
-COPY ./docker-compose.yml /home/docker-compose.yml
 
 #ENTRYPOINT ["./run_tests.sh"] 
