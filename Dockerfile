@@ -14,6 +14,8 @@ COPY ./GoogleSearch.robot /home/WebTesting/GoogleSearch.robot
 
 COPY ./run_test.sh /home/WebTesting/run_test.sh
 
+RUN chmod +x /home/WebTesting/run_test.sh
+
 RUN  pip install -r /tmp/requirements.txt
 
 COPY ./docker-compose.yml /home/docker-compose.yml
