@@ -12,6 +12,8 @@ COPY ./requirements.txt /tmp/requirements.txt
 
 COPY ./GoogleSearch.robot /home/WebTesting/GoogleSearch.robot
 
+COPY ./run_test.sh /home/WebTesting/run_test.sh
+
 RUN  pip install -r /tmp/requirements.txt
 
 COPY ./docker-compose.yml /home/docker-compose.yml
@@ -39,4 +41,4 @@ COPY ./docker-compose.yml /home/docker-compose.yml
 
 #ENV PATH $CHROMEDRIVER_DIR:$PATH
 
-#ENTRYPOINT ["/run_test.sh"] 
+#ENTRYPOINT ["./run_test.sh"] 
