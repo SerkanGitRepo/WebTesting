@@ -1,2 +1,2 @@
 #!/bin/bash
-robot GoogleSearch.robot
+robot /home/WebTesting/GoogleSearch.robot
